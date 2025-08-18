@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Applemint";
+    src: url("https://db.onlinewebfonts.com/t/06c62cc0cc5e2acb0013a4ad5742e20f.eot");
+    src: url("https://db.onlinewebfonts.com/t/06c62cc0cc5e2acb0013a4ad5742e20f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/06c62cc0cc5e2acb0013a4ad5742e20f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/06c62cc0cc5e2acb0013a4ad5742e20f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/06c62cc0cc5e2acb0013a4ad5742e20f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/06c62cc0cc5e2acb0013a4ad5742e20f.svg#Applemint")format("svg");
+}
+
+html,
+body {
+    font-family: "Applemint";
+}
