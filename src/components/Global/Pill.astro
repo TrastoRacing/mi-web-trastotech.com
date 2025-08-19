@@ -1,0 +1,17 @@
+---
+type Props = {
+    bgColor: string;
+    textColor: string;
+}
+
+const { bgColor, textColor } = Astro.props;
+
+const pillClasses = {
+    'text-xs px-3 py-1 rounded-full': true,
+    [`bg-${bgColor}/10 text-${textColor}`]: true
+}
+---
+
+<span class:list={[pillClasses]}>
+    <slot />
+</span>
