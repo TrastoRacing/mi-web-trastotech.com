@@ -1,13 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
+import {getPostSortedByDate} from "../../helpers/blogHelper";
 
 
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import BlogCard from "../../components/BlogCard.astro";
 
-const posts = (await getCollection('blog')).sort(
-	({ data: { pubDate: pubDateA } },{ data: { pubDate: pubDateB } }) => pubDateB.valueOf() - pubDateA.valueOf(),
-);
+const posts = await getPostSortedByDate();
 ---
 <BlogLayout>
     {

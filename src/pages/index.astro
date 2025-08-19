@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 import PageLayout from "../layouts/PageLayout.astro";
 
 import profileImage from '../assets/profile.jpg';
+import LatestPostsWidget from "../components/LatestPostsWidget.astro";
 ---
 <PageLayout>
     <div class="bg-gray-900 py-12 px-4">
@@ -119,30 +120,7 @@ import profileImage from '../assets/profile.jpg';
                     </div>
                 </section>
 
-                <!-- Card 6: Blog/Artículos Recientes -->
-                <section class="bg-gray-900 border border-gray-800 rounded-2xl shadow-lg shadow-cyan-400/10 p-6">
-                    <h3 class="text-white text-lg font-semibold mb-4">Blog reciente</h3>
-
-                    <div class="space-y-4">
-                        <div class="border-l-4 border-cyan-400 pl-3">
-                            <h4 class="text-cyan-400 text-sm font-medium">Tailwind CSS v4: Novedades</h4>
-                            <p class="text-gray-400 text-xs">Explorando las nuevas características y mejoras...</p>
-                            <span class="text-gray-500 text-xs">2 días</span>
-                        </div>
-
-                        <div class="border-l-4 border-blue-400 pl-3">
-                            <h4 class="text-blue-400 text-sm font-medium">React Server Components</h4>
-                            <p class="text-gray-400 text-xs">Guía práctica para implementar RSC en proyectos...</p>
-                            <span class="text-gray-500 text-xs">1 semana</span>
-                        </div>
-
-                        <div class="border-l-4 border-green-400 pl-3">
-                            <h4 class="text-green-400 text-sm font-medium">Optimización web moderna</h4>
-                            <p class="text-gray-400 text-xs">Técnicas avanzadas para mejorar el rendimiento...</p>
-                            <span class="text-gray-500 text-xs">2 semanas</span>
-                        </div>
-                    </div>
-                </section>
+                <LatestPostsWidget />
 
                 <!-- Card 7: Contacto CTA -->
                 <section class="md:col-span-1 lg:col-span-2 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 border border-cyan-400/20 rounded-2xl shadow-lg shadow-cyan-400/20 p-6">
