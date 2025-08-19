@@ -1,8 +1,10 @@
 ---
+import { GITHUB_URL, LINKEDIN_URL } from "../consts";
+
 import GithubIcon from "./GithubIcon.astro";
 import LinkedinIcon from "./LinkedInIcon.astro";
-
 import Logo from "./Logo.astro";
+
 const today = new Date();
 ---
 
@@ -14,11 +16,11 @@ const today = new Date();
             </div>
 
             <div class="flex space-x-4">
-                <a href="https://github.com/TrastoRacing" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+                <a href={GITHUB_URL} target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
                     <GithubIcon />
                 </a>
 
-                <a href="#" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+                <a href={LINKEDIN_URL} target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
                     <LinkedinIcon />
                 </a>
             </div>
