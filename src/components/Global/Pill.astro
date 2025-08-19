@@ -1,14 +1,15 @@
 ---
+import type {HTMLAttributes} from "astro/types";
+
 type Props = {
-    bgColor: string;
-    textColor: string;
+    class: string;
 }
 
-const { bgColor, textColor } = Astro.props;
+const { class: classList } = Astro.props;
 
 const pillClasses = {
     'text-xs px-3 py-1 rounded-full': true,
-    [`bg-${bgColor}/10 text-${textColor}`]: true
+    [classList]: true,
 }
 ---
 
