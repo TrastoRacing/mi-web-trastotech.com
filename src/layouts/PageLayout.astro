@@ -25,6 +25,8 @@ const bodyClasses = {
 <html lang="es">
 <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
+    <slot name="head" />
 </head>
 <body class:list={[bodyClasses]}>
     <Header />

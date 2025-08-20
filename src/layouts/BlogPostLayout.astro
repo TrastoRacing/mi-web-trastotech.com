@@ -1,17 +1,42 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
+
+import { getPostUrl } from "../helpers/blogHelper";
 
 import PageLayout from "./PageLayout.astro";
 
 import FormattedDate from '../components/FormattedDate.astro';
+import SeoSection from "../components/Global/SeoSection.astro";
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, pubDate, heroImage } = Astro.props;
+const { title, pubDate, heroImage, description } = Astro.props;
+
+const optimizedHeroImage = await getImage({
+    src: heroImage || ''
+});
+
+const heroImageUrl = new URL(optimizedHeroImage.src, Astro.url).href;
+
+const postUrl = getPostUrl(title, Astro.site);
 ---
 
 <PageLayout isBlogPostView>
+    <SeoSection
+        slot="head"
+        title={title}
+        headTitle={title}
+        description={description}
+        keywords="Antonio Sancho, profesional TI, Control-m, docker, portainer, homelab, self-hosting"
+        robots="index, follow"
+        locale="es_ES"
+        imageUrl={heroImageUrl}
+        imageWidth="640"
+        imageHeight="360"
+        url={postUrl}
+    />
+
     <main class="bg-gray-900 min-h-screen px-4 py-10 sm:px-0 flex justify-center">
         <article class="bg-gray-900 border border-gray-800 shadow-lg shadow-cyan-400/10 rounded-2xl w-full p-8">
             <div class="flex items-center gap-2 mb-4">

@@ -8,8 +8,22 @@ import CurrentProjectWidget from "../components/Widgets/CurrentProjectWidget.ast
 import TechStackWidget from "../components/Widgets/TechStackWidget.astro";
 import LatestPostsWidget from "../components/Widgets/LatestPostsWidget.astro";
 import ContactWidget from "../components/Widgets/ContactWidget.astro";
+import SeoSection from "../components/Global/SeoSection.astro";
 ---
 <PageLayout>
+    <SeoSection
+        slot="head"
+        title="TrastoTech - Profesional de TI"
+        description="TrastoTech - Profesional de TI"
+        keywords="Antonio Sancho, profesional TI, Control-m, docker, portainer, homelab, self-hosting"
+        robots="index, follow"
+        locale="es_ES"
+        imageUrl={`${Astro.site}assets/images/profile.jpg`}
+        imageWidth="516"
+        imageHeight="430"
+        url={`${Astro.site}`}
+    />
+
     <div class="bg-gray-900 py-12 px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-6 auto-rows-auto">
             <AboutWidget />

@@ -1,8 +1,23 @@
 ---
 import PageLayout from "./PageLayout.astro";
+import SeoSection from "../components/Global/SeoSection.astro";
 ---
 
 <PageLayout>
+    <SeoSection
+        slot="head"
+        title="TrastoTech - Profesional de TI"
+        headTitle="Blog"
+        description="TrastoTech - Profesional de TI"
+        keywords="Antonio Sancho, profesional TI, Control-m, docker, portainer, homelab, self-hosting"
+        robots="index, follow"
+        locale="es_ES"
+        imageUrl={`${Astro.site}assets/images/profile.jpg`}
+        imageWidth="516"
+        imageHeight="430"
+        url={`${Astro.site}blog`}
+    />
+
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8 px-4 bg-gray-900">
         <slot />
     </div>
