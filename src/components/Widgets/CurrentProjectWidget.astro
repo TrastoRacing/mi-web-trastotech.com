@@ -1,0 +1,23 @@
+---
+import Pill from "../Global/Pill.astro";
+---
+<section class="md:col-span-2 xl:col-span-2 bg-gray-900 border border-gray-800 rounded-2xl shadow-lg shadow-cyan-400/10 p-6">
+    <h3 class="text-white text-lg font-semibold mb-4">Proyecto Actual</h3>
+
+    <div class="grid md:grid-cols-1 gap-4">
+        <div class="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+            <div class="flex items-center mb-2">
+                <div class="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
+                <span class="text-blue-400 font-medium">Técnico de sistemas en Indra</span>
+            </div>
+
+            <p class="text-gray-400 text-sm mb-3">Trabajando como operador de CPD en el proyecto de Movistar+</p>
+
+            <div class="flex flex-wrap gap-1">
+                <Pill class="bg-cyan-400/10 text-cyan-400">Control-m</Pill>
+                <Pill class="bg-purple-500/10 text-purple-400">Batch</Pill>
+                <Pill class="bg-blue-500/10 text-blue-400">Docker</Pill>
+            </div>
+        </div>
+    </div>
+</section>

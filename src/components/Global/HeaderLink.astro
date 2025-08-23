@@ -9,18 +9,12 @@ const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 
 const headerLinkClasses = {
-    'transition-all duration-300': true,
-    'font-light': !isActive,
-    'active underline underline-offset-4 font-semibold': isActive
+    'transition-colors duration-300 px-3 py-2': true,
+    'text-gray-300 hover:text-cyan-400 ': !isActive,
+    'text-white border-b-2 border-cyan-400': isActive
 }
 ---
 
 <a href={href} class:list={[className, headerLinkClasses]} {...props}>
-	<slot />
+    <slot />
 </a>
-
-<style scoped>
-    a {
-        line-height: 2;
-    }
-</style>

@@ -1,0 +1,16 @@
+---
+import {Image} from "astro:assets";
+
+import favicon from '../../../public/favicon.png'
+
+import { SITE_TITLE } from '../../consts';
+---
+
+<div class="flex items-center">
+    <Image src={favicon} alt="favicon" width={64} height={64} />
+
+    <span class="text-white text-xl font-bold">
+        {SITE_TITLE}<span class="text-cyan-400">.</span>
+</span>
+</div>
+

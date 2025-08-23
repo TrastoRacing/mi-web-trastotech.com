@@ -1,0 +1,58 @@
+---
+import { sortAlphabetically } from "../../helpers/arrayHelper";
+
+const STACK: string[] = [
+    'Control-m',
+    'Patrol',
+    'Bhome',
+    'EMC NetWorker',
+    'Bash',
+    'Docker',
+    'Portainer',
+    'OpenShift',
+    'k8s',
+    'Ansible',
+    'Windows',
+    'Linux',
+    'Unix',
+    'Remedy',
+    'Jira',
+    'Splunk',
+    'Grafana',
+    'MRTG',
+    'TIBCO',
+    'BONITA',
+    'OpenVms'
+]
+
+const stackSorted = STACK.sort(sortAlphabetically)
+
+const firstMiddleStack = stackSorted.slice(0, Math.round(stackSorted.length / 2));
+const lastMiddleStack = stackSorted.slice(Math.round(stackSorted.length / 2), stackSorted.length);
+---
+
+<section class="bg-gray-900 border border-gray-800 rounded-2xl shadow-lg shadow-cyan-400/10 p-6">
+    <div class="flex items-center mb-4">
+        <div class="bg-cyan-400/10 p-2 rounded-lg mr-3">
+            <svg class="w-6 h-6 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+            </svg>
+        </div>
+
+        <h3 class="text-white text-lg font-semibold">Tech Stack</h3>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 text-sm">
+        <div class="text-gray-300">
+            { firstMiddleStack.map(item => (
+                    <p class="text-gray-300 text-sm">{ item }</p>
+            )) }
+        </div>
+
+        <div class="text-gray-300">
+            { lastMiddleStack.map(item => (
+                    <p class="text-gray-300 text-sm">{ item }</p>
+            )) }
+        </div>
+    </div>
+</section>
