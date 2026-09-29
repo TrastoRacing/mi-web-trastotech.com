@@ -13,11 +13,9 @@ type Props = CollectionEntry<'blog'>['data'];
 
 const { title, pubDate, heroImage, description } = Astro.props;
 
-const optimizedHeroImage = await getImage({
-    src: heroImage || ''
-});
-
-const heroImageUrl = new URL(optimizedHeroImage.src, Astro.url).href;
+const heroImageUrl = heroImage
+    ? new URL((await getImage({ src: heroImage })).src, Astro.url).href
+    : '';
 
 const postUrl = getPostUrl(title, Astro.site);
 ---
