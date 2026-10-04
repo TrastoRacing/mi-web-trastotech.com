@@ -91,6 +91,7 @@ vite.config.ts.timestamp-*
 .idea
 .astro
 dist/
+MIGRATION.md
 
 # Lockfile tracked for reproducible builds and reliable audits
 # (removed from ignore as part of the Astro 7 upgrade)
